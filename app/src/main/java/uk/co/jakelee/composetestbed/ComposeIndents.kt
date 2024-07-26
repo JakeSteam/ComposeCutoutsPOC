@@ -17,6 +17,7 @@ import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.CompositingStrategy
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -30,7 +31,7 @@ fun TopLeftCircle() {
         .height(100.dp)
         .padding(4.dp)
         .graphicsLayer {
-            alpha = 0.99f
+            compositingStrategy = CompositingStrategy.Offscreen
         }
         .drawWithContent {
             drawContent()
@@ -58,7 +59,7 @@ fun MiddleLeftCircle() {
         .height(100.dp)
         .padding(4.dp)
         .graphicsLayer {
-            alpha = 0.99f
+            compositingStrategy = CompositingStrategy.Offscreen
         }
         .drawWithContent {
             drawContent()
@@ -86,7 +87,7 @@ fun MultipleCircles() {
         .height(100.dp)
         .padding(4.dp)
         .graphicsLayer {
-            alpha = 0.99f
+            compositingStrategy = CompositingStrategy.Offscreen
         }
         .drawWithContent {
             drawContent()
@@ -126,7 +127,7 @@ fun ArbitraryShapes() {
         .height(100.dp)
         .padding(4.dp)
         .graphicsLayer {
-            alpha = 0.99f
+            compositingStrategy = CompositingStrategy.Offscreen
         }
         .drawWithContent {
             drawContent()
